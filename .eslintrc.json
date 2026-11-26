@@ -1,0 +1,4 @@
+{
+  // Inherit recommended Next.js rules to verify best practices and fast performance
+  "extends": "next/core-web-vitals"
+}

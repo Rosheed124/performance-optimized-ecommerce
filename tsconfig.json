@@ -1,0 +1,66 @@
+{
+  // Compiler options tell TypeScript how to convert and type-check our code
+  "compilerOptions": {
+    // Target modern ECMAScript standards supported across all modern browsers
+    "target": "ES2017",
+    // Use the latest standard module format
+    "module": "esnext",
+    // Let Next.js handle resolving file imports
+    "moduleResolution": "bundler",
+    // Allow importing JSON data files directly
+    "resolveJsonModule": true,
+    // Enable seamless interoperability between module types
+    "esModuleInterop": true,
+    // Turn on the strictest type checks to catch bugs early
+    "strict": true,
+    // Next.js handles file output, so TypeScript does not need to emit files
+    "noEmit": true,
+    // Keep JSX elements intact for Next.js to transform
+    "jsx": "preserve",
+    // Remember build information to speed up recompilation
+    "incremental": true,
+    // Use React's modern JSX transform
+    "jsxImportSource": "react",
+    // Allow regular JavaScript files alongside TypeScript
+    "allowJs": true,
+    // Skip checking library types inside node_modules to speed up builds
+    "skipLibCheck": true,
+    // Ensure file names match exact uppercase and lowercase letters
+    "forceConsistentCasingInFileNames": true,
+    // Enable modern decorator syntax
+    "experimentalDecorators": true,
+    // Base folder for file paths is the root project directory
+    "baseUrl": ".",
+    // Shortcut alias '@/' pointing directly to the 'src' folder
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    // Next.js official TypeScript plugin
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    // Standard library definition files
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    // Ensure every file can be safely converted independently
+    "isolatedModules": true
+  },
+  // Files TypeScript should inspect
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  // Folders TypeScript should ignore
+  "exclude": [
+    "node_modules"
+  ]
+}

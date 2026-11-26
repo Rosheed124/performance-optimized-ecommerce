@@ -1,0 +1,78 @@
+/* Import Tailwind CSS base styles */
+@tailwind base;
+/* Import Tailwind CSS components */
+@tailwind components;
+/* Import Tailwind CSS utilities */
+@tailwind utilities;
+
+/* Light mode theme tokens for clean, high-contrast commerce */
+:root {
+  /* Crisp clean canvas background */
+  --perf-canvas: #fafafa;
+  /* Pure white product card surface */
+  --perf-surface: #ffffff;
+  /* Subdued soft gray for containers and image skeletons */
+  --perf-subtle: #f4f4f5;
+  /* Border lines */
+  --perf-border: #e4e4e7;
+  /* High-contrast deep slate text */
+  --perf-text: #09090b;
+  /* Muted captions and ratings */
+  --perf-muted: #71717a;
+  /* Sapphire blue accent */
+  --perf-accent: #2563eb;
+  /* Emerald green for 100/100 Lighthouse and Good Web Vitals */
+  --perf-emerald: #16a34a;
+  /* Amber orange for warnings */
+  --perf-amber: #d97706;
+  /* Rose red for poor metrics */
+  --perf-rose: #e11d48;
+}
+
+/* Dark mode theme tokens for futuristic obsidian aesthetic */
+.dark {
+  /* Deep midnight obsidian canvas */
+  --perf-canvas: #09090b;
+  /* Elevated slate card surface */
+  --perf-surface: #121215;
+  /* Dark inset container */
+  --perf-subtle: #1c1c21;
+  /* Border lines */
+  --perf-border: #27272a;
+  /* Clean ivory white text */
+  --perf-text: #fafafa;
+  /* Muted slate text */
+  --perf-muted: #a1a1aa;
+  /* Vibrant electric blue accent */
+  --perf-accent: #3b82f6;
+  /* Vibrant emerald green */
+  --perf-emerald: #22c55e;
+  /* Vibrant amber */
+  --perf-amber: #f59e0b;
+  /* Vibrant rose red */
+  --perf-rose: #f43f5e;
+}
+
+/* Base body styles */
+body {
+  background-color: var(--perf-canvas);
+  color: var(--perf-text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background-color: rgba(161, 161, 170, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(161, 161, 170, 0.6);
+}
